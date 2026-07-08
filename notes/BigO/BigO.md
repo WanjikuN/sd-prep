@@ -8,7 +8,7 @@ Time remains the same regardles of the input eg getting index in an array
 Time grows slowly as input increase eg binary search where the dataset is haved in each step
 
 ### 3. O(n) - Linear Time
-Time grows proportially with the input size eg Linear searcg oor looping though a list
+Time grows proportially with the input size eg Linear search or looping though a list
 
 ### 4. O(n log n) - Linearithmic time
 Efficient sorting algorithms eg quick sort and bubble sort
