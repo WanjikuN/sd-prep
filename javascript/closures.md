@@ -46,3 +46,11 @@ console.log(counter());
 ```
 #### solution
 - The output will be 1 then 2 then 3 as the counter reference is one therefore the stored count increments on each call and stored the last variable value with each call.
+
+### Question: What happens if two keys hash to the same location?
+- Hash collison
+-Hash maps handle collisions using techniques such as:
+
+    a. Chaining (store multiple entries in a bucket)
+
+    b. Open addressing (find another empty slot)
