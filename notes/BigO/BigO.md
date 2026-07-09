@@ -11,10 +11,10 @@ Time grows slowly as input increase eg binary search where the dataset is haved 
 Time grows proportially with the input size eg Linear search or looping though a list
 
 ### 4. O(n log n) - Linearithmic time
-Efficient sorting algorithms eg quick sort and bubble sort
+Efficient sorting algorithms eg quick sort and merge sort
 
 ### 5. O(n^2) - Quadratic time
-Time grows with the square of input size eg bubble sort or nested loops
+If the outer loop executes n times and the inner loop also executes n times for each outer iteration, the total number of operations is n × n = n²
 
 ### 6. O(n!) - Factorial and O(2^n) - Exponential
 Inefficient and arises from brute force approaches
@@ -25,4 +25,4 @@ Inefficient and arises from brute force approaches
 
 2. Why is nested iteration usually O(n²)?`It is quadratic time becase time grows with the square of the input.`
 
-3. When can nested loops still be O(n)?If the input is one
+3. When can nested loops still be O(n)?If the input is one and we use while loop
