@@ -13,18 +13,38 @@
 
 // Lessons Learned
 
-// Approach
+// Approach1
 const anagramFn = (s, t) => {
     let boolValid = false;
     if (s.length !== t.legth) return;
     // Loop through one confirming with the other
     for (let i = 0; i < s.legth; i++) {
         if (t.includes(s[i])) {
-            t.replace(s[i],"")
-            s.replace(s[i],"")
+            t.replace(s[i], "");
+            s.replace(s[i], "");
         } else {
             boolValid = false;
         }
     }
     return boolValid;
 };
+// refined Approach1
+// Time complexity -> O(n)
+// space complexity -> O(1)
+const anagramFn2 = (s, t) => {
+    if (s.length !== t.length) {
+        return false;
+    }
+    // compare all characters
+    for (let i = 0; i < s.length; i++) {
+        if (t.includes(s[i])) {
+            t.replace(s[i], "");
+            s.replace(s[i], "");
+        } else {
+            return false;
+        }
+    }
+    return true;
+};
+console.log(anagramFn());
+console.log(anagramFn2());

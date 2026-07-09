@@ -33,3 +33,20 @@ const twoSum = (nums, target) => {
     }
 };
 console.log(twoSum([2, 7, 11, 15], 9));
+
+// Approach 2
+// time complexity -> O(n)
+// space complexity -> O(1)
+const twoSum2 = (nums, target) => {
+    // create an instance of map
+    const numsMap = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i]
+        if(numsMap.has(diff)){
+            return [numsMap.get(diff),i]
+        } 
+        else{
+            numsMap.set(nums[i],i)
+        }
+    }
+};

@@ -13,14 +13,47 @@
 // O(1) - Constant space complexity
 // Lessons Learned
 
-// Approach
+// Approach1
 const contDuplicates = (nums) => {
     let boolVal = false;
-    let x = Set(nums);
+    let x = new Set(nums);
     if (nums.legth === 0) return;
-    if (x.length == nums.length) {
-        boolVal = true
+    if (x.size == nums.length) {
+        boolVal = true;
     }
     return boolVal;
 };
+// Refined Approach1
+
+// time complexity == O(n^2)
+// space complexity == O(1)
+// const contDuplicates2 = (nums) => {
+//     if (nums.length == 1) {
+//         return false;
+//     }
+//     // compare numbers and get a duplicate
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = 0; j < nums.length; j++) {
+//             if (nums[i] == nums[j]) {
+//                 return true;
+//             }
+//         }
+
+//     }
+// };
+const contDuplicates3 = (nums) => {
+    if (nums.length == 1) {
+        return false;
+    }
+    const dupMap = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        if (dupMap.has(nums[i])) {
+            return true;
+        } else {
+            dupMap.set(nums[i], i);
+        }
+    }
+    return false;
+};
 console.log(contDuplicates([1, 2, 3, 1]));
+// console.log(contDuplicates2([1, 2, 3, 1]));
