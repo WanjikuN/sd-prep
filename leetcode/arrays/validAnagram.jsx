@@ -25,7 +25,7 @@ const anagramFn = (s, t) => {
         } else {
             boolValid = false;
         }
-    }   
+    }
     return boolValid;
 };
 // refined Approach1
@@ -43,8 +43,8 @@ const anagramFn2 = (s, t) => {
         } else {
             return false;
         }
-        return true;
     }
+    return true;
 };
 console.log(anagramFn());
 console.log(anagramFn2());
