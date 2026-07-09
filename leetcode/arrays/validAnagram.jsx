@@ -1,0 +1,30 @@
+// Problem
+// Valid Anagram
+// Problem: Given two strings s and t, return true if t is an anagram of s, and false otherwise.  An anagram is a word formed by rearranging the letters of another, using all the original letters exactly once.
+
+// Input: s = "anagram", t = "nagaram"
+// Output: true
+// Input: s = "rat", t = "car"
+// Output: false
+// Constraints: Strings consist of lowercase English letters
+// Time Complexity
+
+// Space Complexity
+
+// Lessons Learned
+
+// Approach
+const anagramFn = (s, t) => {
+    let boolValid = false;
+    if (s.length !== t.legth) return;
+    // Loop through one confirming with the other
+    for (let i = 0; i < s.legth; i++) {
+        if (t.includes(s[i])) {
+            t.replace(s[i],"")
+            s.replace(s[i],"")
+        } else {
+            boolValid = false;
+        }
+    }
+    return boolValid;
+};
