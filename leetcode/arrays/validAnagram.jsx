@@ -48,3 +48,26 @@ const anagramFn2 = (s, t) => {
 };
 console.log(anagramFn());
 console.log(anagramFn2());
+
+// frequency map - counts how many times a  character appears in a collection
+// valid Anagram
+// time complexity - O(n)
+// space complexity- O(n)
+// solution
+const freqAnagram = (s, t) => {
+    // length validation
+    if (s.length !== t.length) return false;
+    const freqMap = new Map();
+    // get the frequency of string s
+    for (const char of s) {
+        freqMap.set(char, (freqMap.get(char) || 0) + 1);
+    }
+    // Find the differences in the 2 strings
+    for (const char in t) {
+        if (!freqMap.get(char)) {
+            return false;
+        }
+        freqMap.set(char, freqMap.get(char) - 1);
+    }
+    return freqMap.size === 0;
+};
