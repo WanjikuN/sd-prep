@@ -52,6 +52,9 @@ console.log(anagramFn2());
 // frequency map - counts how many times a  character appears in a collection
 // valid Anagram
 // time complexity - O(n)
+/* 
+We iterate through s once to build the frequency map and through t once to compare frequencies. This results in 2n operations, which simplifies to O(n) because constant factors are ignored in Big O notation.
+*/
 // space complexity- O(n)
 // solution
 const freqAnagram = (s, t) => {
@@ -63,11 +66,14 @@ const freqAnagram = (s, t) => {
         freqMap.set(char, (freqMap.get(char) || 0) + 1);
     }
     // Find the differences in the 2 strings
-    for (const char in t) {
+    for (const char of t) {
         if (!freqMap.get(char)) {
             return false;
         }
         freqMap.set(char, freqMap.get(char) - 1);
     }
-    return freqMap.size === 0;
+    for (const value of freqMap.values()) {
+        if (value !== 0) return false;
+    }
+    return true;
 };
