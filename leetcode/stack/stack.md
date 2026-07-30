@@ -54,3 +54,30 @@ Whenever you see
 - Need the most recent item
 - Reverse order proocessing
 
+---
+### Monotonic stack template
+```
+const stack = [];
+const result = new Array(nums.length).fill(defaultValue);
+
+for (let i = 0; i < nums.length; i++) {
+
+    while (
+        stack.length > 0 &&
+        CONDITION
+    ) {
+        // Either:
+        // 1. Pop and update the popped element (Next problems)
+        // OR
+        // 2. Just pop useless elements (Previous problems)
+    }
+
+    // Maybe update result[i]
+
+    stack.push(i);
+}
+
+return result;
+
+
+```
