@@ -16,7 +16,7 @@ const validAnagram = (s, t) => {
     }
     // frequency map
     for (let i = 0; i < s.length; i++) {
-        sMap.set(s[i], sMap.get(s[i] || 0) + 1);
+        sMap.set(s[i], (sMap.get(s[i]) || 0) + 1);
     }
     // traverse t
     for (let i = 0; i < t.length; i++) {
@@ -26,7 +26,7 @@ const validAnagram = (s, t) => {
             return false;
         }
     }
-    for (const val in sMap.values()) {
+    for (const val of sMap.values()) {
         if (val !== 0) {
             return false;
         }

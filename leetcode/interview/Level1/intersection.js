@@ -16,7 +16,7 @@ const interFn = (nums1, nums2) => {
             result.add(char);
         }
     }
-    return result;
+    return [...result];
 };
 console.log(interFn([4, 9, 5], [9, 4, 9, 8, 4]));
 console.log(interFn([1, 2, 2, 1], [2, 2]));
